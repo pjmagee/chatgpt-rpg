@@ -1,0 +1,227 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Response",
+    "definitions": {
+        "Response": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "narrative": {
+                    "type": "string"
+                },
+                "gained": {
+                    "$ref": "#/definitions/Gained"
+                },
+                "quests": {
+                    "$ref": "#/definitions/Quests"
+                },
+                "location": {
+                    "$ref": "#/definitions/Location"
+                },
+                "lost": {
+                    "$ref": "#/definitions/Gained"
+                },
+                "suggestions": {
+                    "$ref": "#/definitions/Suggestions"
+                }
+            },
+            "required": [
+                "gained",
+                "location",
+                "lost",
+                "narrative",
+                "quests",
+                "suggestions"
+            ],
+            "title": "Response"
+        },
+        "Gained": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "xp": {
+                    "type": "integer"
+                },
+                "credits": {
+                    "type": "integer"
+                },
+                "alignmentPoints": {
+                    "type": "integer"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "abilities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "attributes": {
+                    "$ref": "#/definitions/Attributes"
+                }
+            },
+            "required": [
+                "abilities",
+                "alignmentPoints",
+                "attributes",
+                "credits",
+                "items"
+            ],
+            "title": "Gained"
+        },
+        "Attributes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "strength": {
+                    "type": "integer"
+                },
+                "wisdom": {
+                    "type": "integer"
+                },
+                "intelligence": {
+                    "type": "integer"
+                },
+                "dexterity": {
+                    "type": "integer"
+                },
+                "charisma": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "charisma",
+                "dexterity",
+                "intelligence",
+                "strength",
+                "wisdom"
+            ],
+            "title": "Attributes"
+        },
+        "Location": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "planet": {
+                    "$ref": "#/definitions/Planet"
+                },
+                "building": {
+                    "$ref": "#/definitions/Building"
+                }
+            },
+            "required": [
+                "building",
+                "planet"
+            ],
+            "title": "Location"
+        },
+        "Building": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "room": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "room"
+            ],
+            "title": "Building"
+        },
+        "Planet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "latitude": {
+                    "type": "integer"
+                },
+                "longitude": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "latitude",
+                "longitude"
+            ],
+            "title": "Planet"
+        },
+        "Quests": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "accepted": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Accepted"
+                    }
+                },
+                "progressed": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "completed": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "accepted",
+                "completed",
+                "progressed"
+            ],
+            "title": "Quests"
+        },
+        "Accepted": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "giver": {
+                    "type": "string"
+                },
+                "rewards": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "giver",
+                "name",
+                "rewards"
+            ],
+            "title": "Accepted"
+        },
+        "Suggestions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "choices": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "choices"
+            ],
+            "title": "Suggestions"
+        }
+    }
+}
