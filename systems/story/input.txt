@@ -1,0 +1,23 @@
+{
+    "narrative": "scan the settlement, i must know the name of the settlement. Once known, land my ship there. Prepare to slay. ",
+    "delta": {
+        "xp": [0 or positive integer],
+        "credits": [0 or positive float],
+        "alignmentPoints": [negative or positive integer]",
+        "quests" [an array of quests that changed containing name of quest and completed field being true or false],
+        "location": {
+            "type": "[examples: space station, space sector, space region, etc]",
+            "name": "[name of given location, e.g Tatooine, Core worlds, Hutt Space etc etc],
+            "coordinates": {
+                "x": [float value of the X position at the location],
+                "y": [float value of the Y position at the location],
+                "z": [float value of the Z position at the location]
+            },            
+            "area": {
+                "type": "[examples: building, cave, underground, city, room, etc]",
+                "name": "[name of the structure]"            
+            }
+        }
+    }     
+    "suggestions": [array of 3 suggestions (neutral, dark and light)]
+}

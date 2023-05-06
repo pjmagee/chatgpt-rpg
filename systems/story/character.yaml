@@ -1,0 +1,44 @@
+name: Delegate
+class: Sith Warrior
+level: 5
+xp: 10000
+attributes:
+  dexterity: 0
+  charisma: 0
+  strength: 0
+  wisdom: 0
+  intelligence: 0
+age: 32
+gender: male
+location:
+  coordinates:
+    lat: 0
+    lon: 0
+  planet: 
+    name: Dantooine    
+    building:          
+      name: Sith Temple
+      room: Battle arena
+items: 
+  weapons: 
+    - name: single saber
+      description: A powerful saber
+      damage: 1d19
+    - name: duel saber
+      description: A powerful dual saber
+      damage: 2d14
+  armor:
+    - name: sith battle armor
+      description: strong heavy armor
+  consumables:
+    - name: marjon melon
+      description: a tasty fruit 
+quests:
+  completed:
+    - find my ship
+    - kill the jedi padawan
+    - hunt down the force sensitive
+    - collect protection money
+    - report to emperor
+  current:
+    - find the mole
